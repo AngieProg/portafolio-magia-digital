@@ -20,10 +20,10 @@ const Navbar = () => {
             window.scrollTo(0,0) //scroll to the top of the page
           }}
         >
-          <img src={logo} alt="logo" className='w-9 h-9 object-contain'/>
+          {/* <img src={logo} alt="logo" className='w-9 h-9 object-contain'/> */}
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
-            Angie &nbsp;
-            <span className='sm:block hidden'>| JS Mastery</span>
+            Magia Digital &nbsp;
+            <span className='sm:block hidden'>| Creando tu sitio web</span>
           </p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>

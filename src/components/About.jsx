@@ -5,9 +5,9 @@ import {services} from "../constants";
 import {fadeIn, textVariant} from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
-const ServiceCard = ({index, title, icon}) => {
+const ServiceCard = ({service, index}) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt className="xs:w-[500px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
@@ -18,10 +18,21 @@ const ServiceCard = ({index, title, icon}) => {
             scale:1,
             speed: 450
           }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[600px] flex justify-evenly items-center flex-col"
         >
-          <img src={icon} alt="title"  className="w-16 h-16 object-contain"/>
-          <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+          <img src={service.icon} alt="title"  className="w-16 h-16 object-contain"/>
+          <h3 className="text-white text-[20px] font-bold text-center mt-5">{service.title}</h3>
+          <p className="text-white text-[18px] font-bold text-center mt-5">{service.precio}</p>
+          <ul className="mt-5 list-disc space-y-3 text-[15px]">
+            {service.especificaciones.map((especificacion, index) => (
+              <li
+                key={`service-especificacion-${index}`}
+                className="text-white-100 text-[14px] pl-1 tracking-wider"
+              >
+                {especificacion}
+              </li>
+            ))}
+          </ul>
         </div>
       </motion.div>
     </Tilt>
@@ -32,21 +43,19 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionSubText}>Elige tu mejor opción</p>
+        <h2 className={styles.sectionHeadText}>Paquetes</h2>
       </motion.div>
 
-      <motion.p 
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, incidunt reprehenderit porro cum quas magni repellat possimus asperiores dolor sunt eaque totam natus explicabo quidem, aliquam quam atque! Eveniet, nisi!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit nobis minus voluptatem excepturi architecto nihil illum vel ratione molestiae. Consectetur odit rem aut nam enim consequuntur iste quidem facere?
-      </motion.p>
-
-      <div className="mt-20 flex flex-wrap gap-10">
+      {/* <div className="mt-20 flex flex-wrap gap-20">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div> */}
+
+      <div className="mt-20 flex flex-wrap gap-20">
+        {services.map((service, index) => (
+          <ServiceCard key={index} service={service} />
         ))}
       </div>
     </>

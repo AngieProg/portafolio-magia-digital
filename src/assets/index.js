@@ -6,6 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import computadora from "./computadora.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -29,6 +30,9 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import tripguide1 from "./tripguide.jpeg";
+import carrent1 from "./carrent.jpeg";
+import jobit1 from "./jobit.jpeg";
 
 export {
   logo,
@@ -45,6 +49,7 @@ export {
   git,
   html,
   javascript,
+  computadora,
   mongodb,
   nodejs,
   reactjs,
@@ -58,5 +63,8 @@ export {
   tesla,
   carrent,
   jobit,
+  carrent1,
+  jobit1,
   tripguide,
+  tripguide1,
 };

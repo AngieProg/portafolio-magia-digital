@@ -19,20 +19,20 @@ import {
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
+    carrent1,
+    jobit1,
+    tripguide1,
     threejs,
   } from "../assets";
   
   export const navLinks = [
     {
-      id: "about",
-      title: "About",
+      id: "work",
+      title: "Portafolio",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "about",
+      title: "Paquetes",
     },
     {
       id: "contact",
@@ -42,21 +42,44 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Landig Page Web",
       icon: web,
+      precio: "$6,500.00 mx",
+      especificaciones: [
+        "4 páginas/pestañas",
+        "Diseño Responsivo",
+        "Formulario de Contacto",
+        "Integración con Whatsapp",
+        "Dominio (.com) Incluido / 1er Año",
+        "Hosting Incluido / 1er Año",
+      ]
     },
     {
-      title: "React Native Developer",
+      title: "Sitio Web Dinámico",
       icon: mobile,
+      precio: "$9,500.00 mx",
+      especificaciones: [
+        "6 páginas/pestañas",
+        "Administrador de Inventario, Pedidos y Clientes",
+        "Manejo de Base de datos para respaldo de la información",
+        "Autenticación",
+        "Integración de Pago con PaylPal y Stripe",
+        "Inicio de Sesión",
+        "Diseño Responsivo",
+        "Formulario de Contacto",
+        "Integración con Whatsapp",
+        "Dominio (.com) Incluido / 1er Año",
+        "Hosting Incluido / 1er Año",
+      ]
     },
-    {
+    /*{
       title: "Backend Developer",
       icon: backend,
     },
     {
       title: "Content Creator",
       icon: creator,
-    },
+    },*/
   ];
   
   const technologies = [
@@ -198,67 +221,19 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      name: "Bank App",
+      image: carrent1,
+      source_code_link: "https://angieprog.github.io/bankApp/",
     },
     {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      name: "Nike App",
+      image: jobit1,
+      source_code_link: "https://angieprog.github.io/nike/",
     },
     {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      name: "Restaurant",
+      image: tripguide1,
+      source_code_link: "https://gericht.vercel.app/",
     },
   ];
   
